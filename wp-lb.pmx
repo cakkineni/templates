@@ -50,6 +50,8 @@ images:
      value: 8080
    - variable: APP
      value: WP
+   - variable: ETCD_API
+     value: 172.17.42.1:4001
   ports:
    - host_port: 8081
      container_port: 8080
