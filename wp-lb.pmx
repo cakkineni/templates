@@ -1,4 +1,4 @@
-name: Wordpress with MySQL
+name: LB Wordpress with MySQL
 description: Wordpress container linked to a MySQL container
 keywords: wordpress, mysql, public
 recommended: true
