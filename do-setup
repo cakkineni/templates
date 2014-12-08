@@ -1,0 +1,28 @@
+name: DigitalOceat CoreOS + PMX Remote Agent
+description: ''
+keywords: ''
+type: Default
+documentation: "##Testing Purposes Only##"
+images:
+- name: DigitalOcean_CoreOS_Installer
+  source: cakkineni/digitalocean-create-cluster:latest
+  type: Default
+  environment:
+  - variable: DIGITALOCEAN_TOKEN
+    value: ''
+  - variable: REGION
+    value: 'nyc3'
+  - variable: SSH_KEY_NAME
+    value: 'macbook air'
+  - variable: NODE_COUNT
+    value: 1
+  - variable: VM_SIZE
+    value: '512mb'
+  - variable: ETCD_API
+    value: 172.17.42.1:4001
+- name: Remote_Agent_Setup
+  source: patocox/pmx-remote-agent-setup:latest
+  type: Default
+  environment:
+  - variable: ETCD_API
+    value: 172.17.42.1:4001
