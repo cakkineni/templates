@@ -1,4 +1,4 @@
-name: DigitalOcean CoreOS + PMX Remote Agent
+name: AWS CoreOS + PMX Remote Agent
 description: ''
 keywords: ''
 type: Default
