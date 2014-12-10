@@ -1,0 +1,28 @@
+name: DigitalOcean CoreOS + PMX Remote Agent
+description: ''
+keywords: ''
+type: Default
+documentation: "##Testing Purposes Only##"
+images:
+- name: AWS_CoreOS_Installer
+  source: cakkineni/aws-create-cluster:latest
+  type: Default
+  environment:
+  - variable: AWS_ACCESS_KEY_ID
+    value: ''
+  - variable: AWS_SECRET_ACCESS_KEY
+    value: ''
+  - variable: REGION
+    value: 'ap-northeast-1'
+  - variable: NODE_COUNT
+    value: 1
+  - variable: VM_SIZE
+    value: 't1.micro'
+  - variable: ETCD_API
+    value: 172.17.42.1:4001
+- name: Remote_Agent_Setup
+  source: patocox/pmx-remote-agent-setup:latest
+  type: Default
+  environment:
+  - variable: ETCD_API
+    value: 172.17.42.1:4001
